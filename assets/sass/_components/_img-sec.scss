@@ -1,0 +1,213 @@
+.c-img-sec {
+
+  &__img-wrap {
+    width: 100%;
+
+    &--chard {
+      @include breakpoint(desktop) {
+        margin-left: -25%;
+      }
+    }
+
+    &--box {
+      margin-top: $offset30;
+      margin-bottom: $offset40;
+
+      &-right {
+        transform: rotate(15deg);
+      }
+
+      &-left {
+        transform: rotate(-15deg);
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+
+    &--char {
+      margin: 0 auto;
+      width: 90%;
+
+      @include breakpoint(small) {
+        width: 70%;
+      }
+
+      @include breakpoint(desktop) {
+        width: 80%;
+      }
+
+      @include breakpoint(large) {
+        width: 70%;
+      }
+
+      &-top {
+        margin: 0 auto;
+        width: 90%;
+
+        @include breakpoint(desktop) {
+          width: 90%;
+        }
+
+        @include breakpoint(large) {
+          width: 100%;
+        }
+      }
+
+      &--left {
+        @include breakpoint(desktop) {
+          margin: 0;
+        }
+      }
+
+      &--right {
+        @include breakpoint(desktop) {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+
+
+
+    &--char1 {
+      margin: 0 auto;
+      width: 40%;
+
+      @include breakpoint(small) {
+        width: 30%;
+      }
+
+      @include breakpoint(desktop) {
+        margin: 0 0 0 auto;
+        width: 55%;
+      }
+    }
+
+    &--box {
+      width: 60%;
+      margin: 0 auto;
+      box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.4);
+
+      @include breakpoint(small) {
+        width: 45%;
+      }
+
+      @include breakpoint(medium) {
+        width: 50%;
+      }
+
+      &-left {
+        @include breakpoint(desktop) {
+          margin: 0;
+          width: 60%;
+        }
+
+        @include breakpoint(desktopLarge) {
+          margin: 0;
+          width: 50%;
+        }
+      }
+
+      &-right {
+        @include breakpoint(desktop) {
+          margin: 0 0 0 auto;
+          width: 70%;
+        }
+      }
+    }
+
+    &--logo {
+      width: 30%;
+
+      @include breakpoint(desktop) {
+        width: 40%;
+      }
+
+      @include breakpoint(large) {
+        width: 35%;
+      }
+    }
+
+    &--chard1 {
+      width: 20%;
+      transform: rotate(30deg);
+      filter: drop-shadow(0px 0px 30px rgba(241,113,58,0.6));
+      margin: 0 auto;
+    }
+
+    &--chard1-bg {
+      position: absolute;
+      filter: drop-shadow(0px 0px 30px rgba(241,113,58,0.6));
+
+      &--1 {
+        width: 6%;
+        top: 2%;
+        left: 25%;
+        transform: rotate(9deg);
+        opacity: 0.7;
+
+        @include breakpoint(desktop) {
+          left: 5%,
+        }
+      }
+
+      &--2 {
+        width: 3%;
+        top: 90%;
+        left: 15%;
+        transform: rotate(16deg);
+        opacity: 0.4;
+
+        @include breakpoint(desktop) {
+          left: 10%,
+        }
+      }
+
+      &--3 {
+        width: 4%;
+        top: 65%;
+        left: 70%;
+        transform: rotate(-18deg);
+        opacity: 0.4;
+
+        @include breakpoint(desktop) {
+          left: 62%,
+        }
+      }
+    }
+
+    &--chard2 {
+      width: 25%;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0px 0px 31px rgba(0,0,0,0.5));
+
+      @include breakpoint(desktop) {
+        margin: 0 0 0 auto;
+      }
+    }
+
+    &--chard5 {
+      width: 45%;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0px 0px 31px rgba(0,0,0,0.5));
+
+      @include breakpoint(desktop) {
+        margin: 0 0 0 auto;
+      }
+    }
+
+    &--chard6 {
+      display: block;
+      margin: 0 auto;
+      width: 45%;
+      filter: drop-shadow(0px 0px 30px rgba(241,113,58,0.6));
+
+      @include breakpoint(desktop) {
+        margin: 0;
+      }
+    }
+  }
+}

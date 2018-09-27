@@ -1,0 +1,60 @@
+.js-main-nav {
+  &--is-visible {
+    display: block;
+  }
+}
+
+.toggle-nav {
+  display: block;
+  border-radius: 7px;
+  margin: 0 auto;
+  width: 37px;
+  padding: 5px;
+  position: absolute;
+  left: 15px;
+  z-index: 55;
+
+  &--front {
+    top: -5px;
+  }
+
+  &__line, &::before, &::after {
+    background-color: $green;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    transition: all .1s ease-in;
+  }
+
+  &::before {
+    transform-origin: 0 0;
+  }
+
+  &__line {
+    transform-origin: 0 50%;
+  }
+
+  &::after {
+    transform-origin: 0 100%;
+  }
+
+  &--close-x {
+    &::before {
+      transform: translateY(3px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(5px) rotate(-45deg);
+    }
+
+    .toggle-nav__line {
+      transform: scale(0);
+    }
+  }
+
+  @include breakpoint(mediumLarge) {
+    display: none;
+  }
+}

@@ -1,0 +1,95 @@
+.table {
+  display: none;
+
+  @include breakpoint(desktop) {
+    display: flex;
+  }
+}
+
+.c-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 20px 0;
+
+  @include breakpoint(desktopLarge) {
+    width: 60%;
+    border-spacing: 30px 0;
+  }
+
+  /*General table styles*/
+  tr {
+    height: 65px;
+
+    th {
+      width: 25%;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $condensed;
+      font-weight: bold;
+
+      &:first-of-type {
+        width: 50%;
+      }
+    }
+
+    td {
+      padding: 5px 30px;
+      text-align: center;
+    }
+  }
+
+  /*Table styles for whats in the box*/
+  &--box {
+    tr {
+      &:first-of-type {
+        background-color: $t-purple-dark;
+      }
+
+      th {
+        border: 2px solid $t-purple-dark;
+        color: white;
+        font-size: calculateRem(24px);
+      }
+
+      td {
+        border-right: 2px solid $t-purple-dark;
+        border-left: 2px solid $t-purple-dark;
+        background-color: rgba($t-purple-light, 0.1);
+        color: $white;
+
+        &:first-of-type {
+          background-color: $t-purple-dark;
+        }
+      }
+
+      &:nth-child(2n) {
+        td {
+          background-color: $white;
+
+          &:first-of-type {
+            background-color: rgba($t-purple-dark, 0.9);
+          }
+        }
+      }
+
+      &:last-of-type {
+        td {
+          border-right: 2px solid $t-purple-dark;
+          border-left: 2px solid $t-purple-dark;
+          border-bottom: 2px solid $t-purple-dark;
+        }
+      }
+    }
+  }
+
+  /*Table styles for price*/
+  &--price {
+    tr {
+      th {
+        color: $purple;
+        font-size: calculateRem(36px);
+      }
+    }
+  }
+}

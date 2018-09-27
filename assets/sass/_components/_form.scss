@@ -1,0 +1,110 @@
+.c-form {
+  position: relative;
+  z-index: 10;
+  width: 85%;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: rgba(202,197,203,0.3);
+  box-shadow: 0 0 40px 0 rgba(0,0,0,0.2);
+
+  @include breakpoint(medium) {
+    width: 70%;
+  }
+
+  @include breakpoint(mediumLarge) {
+    width: 65%;
+  }
+
+  @include breakpoint(desktop) {
+    width: 53%;
+  }
+
+  @include breakpoint(desktopLarge) {
+    width: 34%;
+  }
+
+  &__wrap {
+    margin: 0 auto;
+    padding: 30px;
+
+    input {
+      display: block;
+      vertical-align: middle;
+      height: 50px;
+      box-sizing: border-box;
+
+      @include breakpoint(medium) {
+        display: inline-block;
+      }
+
+      /* removes yellow input fill of browser */
+      &:-webkit-autofill {
+        -webkit-box-shadow: inset 0 0 0px 9999px white;
+      }
+
+      /* removes blue outline when focused */
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    background-color: $white;
+    line-height: 1.34;
+    border: 0.5px solid #DADADA;
+    margin-bottom: $offset10;
+
+    @include breakpoint(medium) {
+      width: 60%;
+      margin-right: -3px;
+      border-radius: 4px 0 0 4px;
+      margin-bottom: 0;
+    }
+
+    &:focus {
+      padding-left: 20px;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &::placeholder {
+      padding: 0 20px;
+      font-family: $open_sans;
+      color: #777777;
+      font-size: calculateRem(17px);
+      letter-spacing: 0.39px;
+
+      @include breakpoint(medium) {
+        padding: 13px 20px;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    border-radius: 4px 4px 4px 4px;
+    background-color: $green;
+    color: $white;
+    font-family: $condensed;
+    font-size: calculateRem(17px);
+    font-weight: bold;
+    letter-spacing: 0.95px;
+    line-height: 1.28;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border: 0.5px solid $green;
+
+    @include breakpoint(medium) {
+      width: 39%;
+      margin-left: -2px;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}

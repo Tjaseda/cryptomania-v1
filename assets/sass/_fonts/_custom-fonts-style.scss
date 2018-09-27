@@ -1,0 +1,40 @@
+.icon-8 {
+  font-size: calculateRem(8px);
+}
+
+.icon-sm {
+  font-size: calculateRem(12px);
+}
+
+.icon-17 {
+  font-size: calculateRem(17px);
+}
+
+.icon-18 {
+  font-size: calculateRem(18px);
+}
+
+.icon-20 {
+  font-size: calculateRem(20px);
+}
+
+.icon-22 {
+  font-size: calculateRem(22px);
+}
+
+.icon-25 {
+  font-size: calculateRem(25px);
+}
+
+.icon-30 {
+  font-size: calculateRem(30px);
+}
+
+.icon-green {
+  color: $green;
+}
+
+.icon-down-front {
+  padding-left: 5px;
+  vertical-align: top;
+}

@@ -1,0 +1,107 @@
+.c-bg-coin {
+  display: none;
+
+  @include breakpoint(desktop) {
+    display: block;
+    position: absolute;
+
+    &--top {
+      top: -62px;
+      left: -85px;
+    }
+
+    &--bottom {
+      bottom: -10%;
+      right: -33%;
+      bottom: -13%;
+      right: -34%;
+    }
+
+    &__img {
+      opacity: 0.5;
+
+      &--top {
+        width: 70%;
+      }
+
+      &--bottom {
+        width: 60%;
+      }
+    }
+  }
+
+  @include breakpoint(desktopMd) {
+    &--top {
+      top: -95px;
+      left: -119px;
+    }
+
+    &--bottom {
+      bottom: -13%;
+      right: -34%;
+    }
+
+    &__img {
+
+      &--top {
+        width: 80%;
+      }
+    }
+  }
+
+  @include breakpoint(desktopLarge) {
+    &--top {
+      top: -95px;
+      left: -119px;
+    }
+
+    &--bottom {
+      bottom: -15%;
+      right: -26%;
+    }
+
+    &__img {
+
+      &--top {
+        width: 80%;
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    &--top {
+      top: -100px;
+      left: -110px;
+    }
+
+    &--bottom {
+      bottom: -18%;
+      right: -27%;
+    }
+
+    &__img {
+
+      &--top {
+        width: 70%;
+      }
+    }
+  }
+
+  @include breakpoint(xlarge) {
+    &--bottom {
+      bottom: -16%;
+      right: -28%;
+    }
+
+    &__img {
+      &--top {
+        width: 55%;
+      }
+
+
+      &--bottom {
+        width: 50%;
+      }
+    }
+  }
+}

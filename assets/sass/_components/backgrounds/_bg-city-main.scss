@@ -1,0 +1,72 @@
+/*
+Main city background - on front page hero, in footer (coming soon) and in page hero
+*/
+
+.c-bg-city {
+  background: $main_grad_bg;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &--lg {
+    min-height: 100vh;
+  }
+
+  &--sm {
+    height: 150px;
+
+    @include breakpoint(mediumLarge) {
+      height: 280px;
+    }
+
+    @include breakpoint(desktopLarge) {
+      height: 350px;
+    }
+  }
+
+  &--md {
+    height: 400px;
+
+    @include breakpoint(mediumLarge) {
+      height: 500px;
+    }
+
+    @include breakpoint(desktopLarge) {
+      height: 620px;
+    }
+  }
+
+  &__img-wrap {
+    display: none;
+
+    @include breakpoint(mediumLarge) {
+      display: block;
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+    }
+
+    &--trans {
+      transform: translateY(7%);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.1;
+  }
+
+  &__overlay {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    background: $radial_grad_bg;
+    opacity: 0.2;
+    height: 120%;
+    transform: translateY(50%);
+  }
+}

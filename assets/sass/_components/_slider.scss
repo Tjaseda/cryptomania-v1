@@ -1,0 +1,171 @@
+.c-slider {
+  position: relative;
+  width: 100%;
+  height: 345px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include breakpoint(small) {
+    height: 340px;
+    width: 80%;
+  }
+
+  @include breakpoint(medium) {
+    height: 350px;
+  }
+
+  @include breakpoint(mediumLarge) {
+    height: 180px;
+  }
+
+  @include breakpoint(desktop) {
+    height: 240px;
+    width: 60%;
+  }
+
+  @include breakpoint(large) {
+    width: 45%;
+  }
+
+  &__wrap {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    transition: all 0.5s ease;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+    height: 100%;
+  }
+
+  &__image {
+    border-radius: 50%;
+    width: 55%;
+    margin: 0 auto;
+
+    @include breakpoint(small) {
+      width: 40%;
+    }
+
+    @include breakpoint(medium) {
+      width: 40%;
+    }
+
+    @include breakpoint(mediumLarge) {
+      width: 60%;
+    }
+
+    @include breakpoint(desktopLarge) {
+      margin: 0 0 0 auto;
+    }
+    @include breakpoint(large) {
+      width: 70%;
+    }
+  }
+
+  &__text {
+    line-height: 1.3;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint(small) {
+      width: 70%;
+    }
+
+    @include breakpoint(mediumLarge) {
+      text-align: left;
+      width: 80%;
+      padding: 0;
+      margin: 0 auto 0 0;
+    }
+
+    @include breakpoint(desktopLarge) {
+      padding: 0 0 0 25px;
+    }
+
+    @include breakpoint(large) {
+      width: 100%;
+    }
+
+    &--txt {
+      font-size: calculateRem(17px);
+      font-family: $open_sans;
+      font-style: italic;
+      padding: 25px 5px 0 5px;
+      color: rgba($white, 0.8);
+    }
+
+    &--name {
+      font-size: calculateRem(17px);
+      font-family: $condensed;
+      padding: 10px 5px 25px 5px;
+      color: rgba($white, 0.3);
+    }
+  }
+
+  &__cour {
+    text-decoration: none;
+    position: absolute;
+    z-index: 70;
+    line-height: 50px;
+    border-radius: 50%;
+    color: $green;
+    top: 35%;
+    transform: translateY(-50%);
+    transition: all 150ms ease;
+
+    @include breakpoint(mediumLarge) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--next {
+      right: 20px;
+
+      @include breakpoint(medium) {
+        right: 0;
+      }
+
+    }
+
+    &--prev {
+      left: 20px;
+
+      @include breakpoint(medium) {
+        left: 0;
+      }
+    }
+  }
+
+  &__blockquote {
+    font-family: 'Helvetica','Arial', sans-serif;
+    position: absolute;
+    color: rgba($purple-light, 0.1);
+    top: 20%;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+    font-size: calculateRem(520px);
+
+    @include breakpoint(small) {
+      font-size: calculateRem(500px);
+      top: 15%;
+    }
+
+    @include breakpoint(mediumLarge) {
+      font-size: calculateRem(520px);
+      top: 10%;
+      right: 0;
+      left: 65%;
+      transform: translateY(-19%);
+    }
+
+    @include breakpoint(desktop) {
+      top: -10%;
+      font-size: calculateRem(600px);
+      transform: translateY(-15%);
+    }
+  }
+}

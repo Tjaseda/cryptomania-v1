@@ -1,0 +1,276 @@
+.l-container {
+  width: 100%;
+
+  @include breakpoint(medium) {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: 1270px;
+  }
+}
+
+.l-wrap {
+  padding: $offset40 $offset10;
+  width: 100%;
+
+  @include breakpoint(desktop) {
+    padding: 0;
+  }
+
+  &--sm {
+    padding: 0 $offset10;
+  }
+}
+
+
+.l-row {
+  display: flex;
+
+  &--wrap {
+    flex-flow: row wrap;
+  }
+
+  &-sm {
+    &--col-o {
+      flex-direction: column;
+    }
+
+    &--col-r {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-md {
+    &--col-o {
+      @include breakpoint(mediumLarge) {
+        flex-direction: column;
+      }
+    }
+    &--col-r {
+      @include breakpoint(mediumLarge) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &-lg--row-o {
+      @include breakpoint(desktopMd) {
+        flex-direction: row;
+      }
+    }
+
+    &-sm--row-o {
+      @include breakpoint(medium) {
+        flex-direction: row;
+      }
+    }
+
+    &--row-o {
+      @include breakpoint(mediumLarge) {
+        flex-direction: row;
+      }
+    }
+    &--row-r {
+      @include breakpoint(mediumLarge) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &-ds {
+    &--col-o {
+      @include breakpoint(desktop) {
+        flex-direction: column;
+      }
+    }
+    &--col-r {
+      @include breakpoint(desktop) {
+        flex-direction: column-reverse;
+      }
+    }
+    &--row-o {
+      @include breakpoint(desktop) {
+        flex-direction: row;
+      }
+    }
+    &--row-r {
+      @include breakpoint(desktop) {
+        flex-direction: column;
+      }
+    }
+    &-md--col-o {
+      @include breakpoint(desktopMd) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &-lg {
+    &--col-o {
+      @include breakpoint(desktopLarge) {
+        flex-direction: column;
+      }
+    }
+    &--col-r {
+      @include breakpoint(desktopLarge) {
+        flex-direction: column-reverse;
+      }
+    }
+    &--row-o {
+      @include breakpoint(desktopLarge) {
+        flex-direction: row;
+      }
+    }
+    &--row-r {
+      @include breakpoint(desktopLarge) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.l-c {
+  display: flex;
+  align-items: center;
+
+  &-lf {
+    justify-content: flex-start;
+  }
+
+  &-rg {
+    justify-content: flex-end;
+  }
+}
+
+.l-cl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-sm {
+    &--10 {
+      width: 100%;
+    }
+
+    &--2 {
+      width: 20%;
+    }
+
+    &--6 {
+      width: 60%;
+    }
+  }
+
+  &-md {
+    &-sm--4 {
+      @include breakpoint(medium) {
+        width: 40%;
+      }
+    }
+
+    &-sm--6 {
+      @include breakpoint(medium) {
+        width: 60%;
+      }
+    }
+
+    &--3 {
+      @include breakpoint(mediumLarge) {
+        width: 30%;
+      }
+    }
+
+    &--5 {
+      @include breakpoint(mediumLarge) {
+        width: 50%;
+      }
+    }
+
+    &--7 {
+      @include breakpoint(mediumLarge) {
+        width: 70%;
+      }
+    }
+  }
+
+  &-ds {
+    &--3 {
+      @include breakpoint(desktop) {
+        width: 30%;
+      }
+    }
+
+    &--4 {
+      @include breakpoint(desktop) {
+        width: 40%;
+      }
+    }
+
+    &--5 {
+      @include breakpoint(desktop) {
+        width: 50%;
+      }
+    }
+
+    &--6 {
+      @include breakpoint(desktop) {
+        width: 60%;
+      }
+    }
+
+    &--7 {
+      @include breakpoint(desktop) {
+        width: 70%;
+      }
+    }
+
+    &-lg--10 {
+      @include breakpoint(desktopMd) {
+        width: 100%;
+      }
+    }
+
+    &-lg--3 {
+      @include breakpoint(desktopMd) {
+        width: (100%/3);
+      }
+    }
+  }
+
+  &-lg {
+    &--5 {
+      @include breakpoint(desktopMd) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.l-cl-10 {
+  width: 100%
+}
+
+.l-cl-5 {
+  width: 100%;
+
+  @include breakpoint(mediumLarge) {
+    width: 50%;
+  }
+}
+
+.l-col {
+  display: inline-block;
+}
+
+.l-col-2 {
+  width: 20%;
+}
+
+.l-col-6 {
+  width: 59%;
+}
+
+.l-col-5 {
+  width: 49%;
+}

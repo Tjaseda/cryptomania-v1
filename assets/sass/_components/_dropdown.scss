@@ -1,0 +1,33 @@
+.current_language img, .dropdown-content a img {
+  width: 22px;
+  vertical-align: middle;
+}
+
+.dropdown {
+  position: relative;
+
+  @include breakpoint(mediumLarge) {
+    margin-right: $offset30;
+  }
+}
+
+.dropdown-content a img {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+.down-cour {
+  color: white;
+}
+
+.dropdown-content {
+  position: absolute;
+  bottom: -25px;
+  left: 5px;
+  display: none;
+
+  &--is-visible {
+    display: block;
+  }
+}

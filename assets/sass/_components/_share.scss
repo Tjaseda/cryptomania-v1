@@ -1,0 +1,20 @@
+.c-share {
+  margin-top: $offset30;
+  text-align: center;
+
+  &__icon-wrap {
+    display: inline-block;
+  }
+
+  &__icon {
+    padding: 0 $offset10;
+
+    &--twitter {
+
+    }
+
+    &--facebook {
+
+    }
+  }
+}

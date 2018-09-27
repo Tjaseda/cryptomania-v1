@@ -1,0 +1,27 @@
+.c-subnav {
+  position: absolute;
+  z-index: 50;
+  display: block;
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    padding: 5px 10px;
+
+    @include breakpoint(medium) {
+      padding: 10px 20px;
+    }
+
+    a {
+      color: $menu_purple;
+      font-family: $condensed;
+      font-size: calculateRem(18px);
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}

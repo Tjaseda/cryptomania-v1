@@ -1,0 +1,7 @@
+/*
+Function that calculates rem from px
+*/
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}

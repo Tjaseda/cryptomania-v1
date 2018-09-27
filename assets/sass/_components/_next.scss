@@ -1,0 +1,57 @@
+.c-next {
+  border-top: 1px solid #D6D6D6;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    &--prev {
+      text-align: right;
+      border-right: 1px solid #D6D6D6;
+    }
+
+    &--next {
+      text-align: left;
+    }
+  }
+
+  &__content {
+    margin: 25px 20px;
+
+    @include breakpoint(medium) {
+      margin: 30px 55px;
+    }
+
+
+    &--link {
+      line-height: 40px;
+    }
+
+    &--title {
+      display: none;
+
+      @include breakpoint(medium) {
+        display: block;
+        color: $menu_purple;
+        font-family: $open_sans;
+        font-size: calculateRem(20px);
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__cors {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--prev {
+      left: 10px;
+    }
+
+    &--next {
+      right: 10px;
+    }
+  }
+}

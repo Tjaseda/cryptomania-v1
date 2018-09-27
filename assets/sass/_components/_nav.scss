@@ -1,0 +1,362 @@
+.menu li.current-menu-item a, .menu li.current-page-ancestor a, .menu li.current_page_item a, .c-subnav li.current_page_item a, .menu li.current-menu-item a {
+  color: $green;
+}
+
+.c-nav {
+  /*
+  Navigation modifiers
+  */
+
+  &--full {
+    top: 0;
+    width: 100%;
+  }
+
+  &--full-height {
+    @include breakpoint(medium) {
+      line-height: 128px;
+    }
+  }
+
+  &--mg {
+    margin: $offset30 0;
+  }
+
+  &--trans {
+    background-color: transparent;
+  }
+
+  &--white {
+    background-color: $white;
+    height: 10px;
+
+    @include breakpoint(desktopLarge) {
+      height: 30px;
+    }
+  }
+
+  &--purple {
+    background-color: $footer_purple;
+    overflow: hidden;
+    padding: $offset40 0;
+
+    @include breakpoint(medium) {
+      padding: 0;
+    }
+  }
+
+  &--to-front {
+    position: relative;
+    z-index: 50;
+  }
+
+  /*
+  Navigation Elements
+  */
+
+  &__site-info {
+    display: block;
+
+    @include breakpoint(medium) {
+      display: inline-block;
+      width: 29%;
+    }
+
+    @include breakpoint(desktop) {
+      display: inline-block;
+      width: 25%;
+    }
+
+    @include breakpoint(desktopLarge) {
+      width: 20%;
+    }
+
+    &__logo {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      padding-bottom: $offset10;
+
+      @include breakpoint(medium) {
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: $offset5;
+        padding: 0;
+      }
+
+      @include breakpoint(desktop) {
+        margin-right: $offset10;
+      }
+
+      @include breakpoint(desktopLarge) {
+        margin-right: $offset20;
+      }
+    }
+
+    &__text {
+      color: $white;
+      font-family: $open_sans;
+      font-size: calculateRem(14px);
+      letter-spacing: 0.83px;
+      text-align: center;
+
+      @include breakpoint(medium) {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        font-size: calculateRem(13px);
+      }
+
+      @include breakpoint(desktop) {
+        font-size: calculateRem(14px);
+      }
+
+      @include breakpoint(desktopLarge) {
+        font-size: calculateRem(16px);
+      }
+    }
+  }
+
+  &__social {
+    text-align: center;
+    margin-top: $offset30;
+
+    @include breakpoint(medium) {
+      margin: 0;
+      display: inline-block;
+      width: 28%;
+      vertical-align: middle;
+
+      div {
+        float: right;
+      }
+    }
+
+    @include breakpoint(desktop) {
+      width: 24%;
+    }
+
+    @include breakpoint(desktopLarge) {
+      width: 20%;
+    }
+
+    &__icon {
+      margin: 0 $offset5;
+      vertical-align: middle;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @include breakpoint(mediumLarge) {
+      display: block;
+      width: 90%;
+      vertical-align: middle;
+      margin-left: $offset20;
+    }
+
+    @include breakpoint(desktop) {
+      width: 75%;
+      margin-left: $offset40;
+    }
+
+    @include breakpoint(desktopLarge) {
+      width: 70%;
+    }
+  }
+
+  &__nav {
+
+    /*
+    Navigation__nav modifiers
+    */
+
+    ul {
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin: 0 20px;
+        vertical-align: middle;
+
+        @include breakpoint(medium) {
+          margin: 0 12px;
+        }
+
+        @include breakpoint(desktop) {
+          margin: 0 20px;
+        }
+
+        @include breakpoint(desktopLarge) {
+          margin: 0 25px;
+        }
+      }
+    }
+
+    &--front, &--page {
+      ul {
+        li {
+          a {
+            font-family: $condensed;
+            font-size: calculateRem(18px);
+            font-weight: bold;
+
+            &:hover {
+              color: $green;
+            }
+          }
+        }
+      }
+    }
+
+    &--front {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 50;
+      transition: all 0.2s ease-out;
+      background-color: $purple-dark;
+
+      ul {
+        li {
+          display: block;
+          margin: 15px 0;
+          a {
+            color: $white;
+          }
+        }
+      }
+
+      /* does not display home link on front page navigation */
+      .home-link {
+        display: none;
+      }
+
+      @include breakpoint(mediumLarge) {
+        position: relative;
+        top: 0;
+        width: 59%;
+        display: block;
+        background-color: transparent;
+
+        ul {
+          li {
+            display: inline-block;
+            margin: 0 15px;
+            a {
+            }
+          }
+        }
+      }
+    }
+
+    &--page {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 7px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 50;
+      transition: all 0.2s ease-out;
+      background-color: $white;
+
+      ul {
+        li {
+          display: block;
+          margin: 15px 0;
+          a {
+            color: $menu_purple;
+          }
+        }
+      }
+
+      .home-link {
+        @include breakpoint(mediumLarge) {
+          display: none;
+        }
+      }
+
+      @include breakpoint(mediumLarge) {
+        position: unset;
+        width: 59%;
+        display: flex;
+        margin: 0;
+
+        ul {
+          li {
+            display: inline-block;
+            margin: 0px 15px;
+          }
+        }
+      }
+    }
+
+    &--lang {
+      position: absolute;
+      top: 0;
+      right: 15px;
+
+      @include breakpoint(mediumLarge) {
+        position: relative;
+        right: 0;
+      }
+
+      &-page {
+        position: absolute;
+        top: 5px;
+        bottom: 0;
+        right: 15px;
+      }
+    }
+
+    &--footer {
+      margin: $offset20 0;
+
+      @include breakpoint(medium) {
+        margin: 0;
+        display: inline-block;
+        width: 40%;
+      }
+
+      @include breakpoint(desktop) {
+        width: 49%;
+      }
+
+      @include breakpoint(desktopLarge) {
+        width: 59%;
+      }
+
+      a {
+        color: rgba($white, 0.6);
+        font-family: $open_sans;
+        font-size: calculateRem(10px);
+        letter-spacing: 0.72px;
+        text-transform: uppercase;
+
+        @include breakpoint(medium) {
+          font-size: calculateRem(10px);
+        }
+
+        @include breakpoint(desktop) {
+          font-size: calculateRem(11px);
+        }
+
+        @include breakpoint(desktopLarge) {
+          font-size: calculateRem(12px);
+        }
+
+        &:hover {
+          color: rgba($white, 0.8);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.c-team {
+  &__wrap {
+    width: 95%;
+  }
+
+  &__image {
+    width: 55%;
+    border-radius: 50%;
+
+    @include breakpoint(small) {
+      width: 40%;
+    }
+
+    @include breakpoint(medium) {
+      width: 80%;
+    }
+
+    @include breakpoint(mediumLarge) {
+      width: 70%;
+    }
+
+    @include breakpoint(desktop) {
+      width: 60%;
+    }
+
+    @include breakpoint(desktopMd) {
+      width: 55%;
+    }
+  }
+
+  &__txt-wrap {
+    text-align: center;
+    flex-direction: column;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+
+    @include breakpoint(desktopMd) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include breakpoint(medium) {
+      display: block;
+      margin: 0 auto 0 30px;
+    }
+
+    @include breakpoint(desktopMd) {
+      margin: 0;
+    }
+  }
+
+  &__name {
+    color: $white;
+    font-family: $condensed;
+    font-size: calculateRem(22px);
+    font-weight: bold;
+    padding: 5px 0;
+  }
+
+  &__position {
+    color: rgba($white, 0.3);
+    font-family: $condensed;
+    font-weight: normal;
+    font-size: calculateRem(18px);
+    padding: 10px 0;
+  }
+
+  &__txt {
+    width: 75%;
+    color: rgba($white ,0.8);
+    font-family: $open_sans;
+    font-size: calculateRem(17px);
+    font-style: italic;
+    padding: 5px 0;
+
+    @include breakpoint(small) {
+      width: 65%;
+    }
+
+    @include breakpoint(medium) {
+      width: 95%;
+    }
+
+    @include breakpoint(desktopMd) {
+      width: 75%;
+    }
+  }
+}

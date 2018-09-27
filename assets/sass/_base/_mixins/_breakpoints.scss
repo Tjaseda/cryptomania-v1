@@ -1,0 +1,38 @@
+/*
+Mobile First Media queries
+*/
+$sm: 500px;
+$med: 740px;
+$med_lg: 850px;
+$des: 970px;
+$des-md: 1200px;
+$des_lg: 1550px;
+$lg: 1920px;
+$xl: 2100px;
+
+@mixin breakpoint($point) {
+  @if $point == xlarge {
+    @media (min-width: $xl) { @content; }
+  }
+  @if $point == large {
+    @media (min-width: $lg) { @content; }
+  }
+  @else if $point == desktopLarge {
+    @media (min-width: $des_lg) { @content; }
+  }
+  @else if $point == desktopMd {
+    @media (min-width: $des_md) { @content; }
+  }
+  @else if $point == desktop {
+    @media (min-width: $des) { @content; }
+  }
+  @else if $point == mediumLarge {
+    @media (min-width: $med_lg) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: $med) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: $sm) { @content; }
+  }
+}

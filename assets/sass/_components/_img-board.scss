@@ -1,0 +1,48 @@
+.c-img-board {
+  /* div is not shown, its purpose is to contain this image that overflows, as bg-city and pg-sec does not show overflown elements */
+  position: relative;
+  height: 0px;
+
+  &__img-wrap {
+    position: absolute;
+    z-index: 7;
+
+    &--board {
+      width: 80%;
+
+      /* horizontaly center an element */
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      /* end of horizontal centering */
+      /* verticaly center an element */
+      top: 0;
+      transform: translateY(-55%);
+
+      @include breakpoint(small) {
+        width: 60%;
+      }
+
+      @include breakpoint(medium) {
+        width: 50%;
+      }
+
+      @include breakpoint(desktop) {
+        width: 35%;
+      }
+
+      @include breakpoint(desktopLarge) {
+        width: 30%;
+      }
+    }
+  }
+
+  &__img {
+
+    &--board {
+      width: 95%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

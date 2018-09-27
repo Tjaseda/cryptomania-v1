@@ -1,0 +1,86 @@
+/*!
+Theme Name: Cryptomania
+Theme URI: https://github.com/Tjaseda/Cryptomania-Development
+Author: Tjasa Dobrilovic
+Author URI: https://github.com/Tjaseda
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: cryptomania
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*
+Normalize CSS cross browsers
+*/
+@import "_lib/normalize";
+
+/*
+Adding Wordpress Generated styles
+*/
+@import "_base/wordpress";
+
+/*
+Colors, Typography, Line Base, Offsets
+*/
+@import "_base/_variables/colors";
+@import "_base/_variables/offsets";
+@import "_base/_variables/typography";
+
+/*
+Functions, clearfix, media queries
+*/
+@import "_base/_mixins/breakpoints";
+@import "_base/_mixins/functions";
+@import "_base/_mixins/mixins";
+
+/*
+General css rules
+*/
+@import "_base/base";
+
+/*
+Fonts - icons
+*/
+
+@import "_fonts/custom-fonts.scss";
+@import "_fonts/custom-fonts-style.scss";
+
+/*
+Layout for Website
+*/
+@import "_layout/layout";
+@import "_layout/spaces"; /*done*/
+@import "_layout/positions"; /*done*/
+@import "_layout/width"; /*done*/
+
+@import "_objects/buttons";
+@import "_objects/typography";
+@import "_objects/pg-sec"; /*done*/
+
+@import "_components/nav"; /*done*/
+@import "_components/dropdown"; /*done*/
+@import "_components/toggle-nav"; /*done*/
+@import "_components/backgrounds/bg-city-main"; /*done*/
+@import "_components/backgrounds/bg-coin"; /*done*/
+@import "_components/backgrounds/bg-cityfull"; /*done*/
+@import "_components/hero"; /*done*/
+@import "_components/img-sec"; /*done*/
+@import "_components/form"; /*done*/
+@import "_components/img-board"; /*done*/
+@import "_components/video"; /*done*/
+@import "_components/share"; /*done*/
+@import "_components/table"; /*done*/
+@import "_components/slider"; /*done*/
+@import "_components/team"; /*done*/
+@import "_components/subnav"; /*done*/
+@import "_components/next"; /*done*/
+
+
+@import "_components/footer"; /*done*/
+
+@import "utilities";

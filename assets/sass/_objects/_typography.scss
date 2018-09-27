@@ -1,0 +1,147 @@
+/*
+Heading Styles
+*/
+
+.o-h {
+  font-family: $condensed;
+  font-weight: bold;
+
+  &--white {
+    color: $white;
+  }
+
+  /*main heading on the page*/
+  &__1 {
+    font-size: calculateRem(50px);
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint(mediumLarge) {
+      font-size: calculateRem(64px);
+    }
+  }
+
+  /*h2 heading in page sections*/
+  &__2 {
+    font-size: calculateRem(33px);
+    letter-spacing: 0.88px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @include breakpoint(mediumLarge) {
+      font-size: calculateRem(36px);
+      letter-spacing: 0.9px;
+      line-height: 1.5;
+    }
+  }
+
+  /*description on front page hero*/
+  &__3 {
+    font-size: calculateRem(26px);
+    letter-spacing: 0.65px;
+  }
+
+  /*share it text below video*/
+  &__4 {
+    font-size: calculateRem(18px);
+  }
+
+}
+
+/*
+Paragraph styles
+*/
+
+.o-s {
+  font-family: $open_sans;
+
+  &__1 {
+    font-size: calculateRem(16px);
+  }
+
+  /*short orange descriptions in page sections*/
+  &__2 {
+    font-size: calculateRem(24px);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+/*
+Link styles
+*/
+.o-a {
+  font-size: calculateRem(17px);
+  font-family: $condensed;
+  font-weight: bold;
+  display: block;
+}
+
+/*
+Text styling
+*/
+
+.o-txt {
+  /*color*/
+  &--white {
+    color: $white;
+  }
+  &--white-tr {
+    color: rgba($white, 0.8);
+  }
+  &--purple {
+    color: $purple;
+  }
+  &--green {
+    color: $green
+  }
+  &--gray {
+    color: rgba(58, 58, 58, 0.8);
+  }
+  &--orange-light {
+    color: $orange;
+  }
+  &--orange-dark {
+    color: $darkorange;
+  }
+
+  /*aligne*/
+  &--center {
+    text-align: center;
+  }
+  &--left {
+    text-align: left;
+  }
+  &--right {
+    text-align: right;
+  }
+
+  /* aligne text in page sections */
+  &--ps-left {
+    text-align: center;
+
+    @include breakpoint(desktop) {
+      text-align: left;
+    }
+  }
+
+  &--ps-right {
+    text-align: center;
+
+    @include breakpoint(desktop) {
+      text-align: right;
+    }
+  }
+
+  &--ps-t-left {
+    text-align: left;
+  }
+
+  &--ps-t-right {
+    text-align: left;
+
+    @include breakpoint(desktop) {
+      text-align: right;
+    }
+  }
+}

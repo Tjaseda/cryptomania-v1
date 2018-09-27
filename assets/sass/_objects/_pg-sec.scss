@@ -1,0 +1,101 @@
+/*
+Page Section Styles
+*/
+
+.o-pg-sec {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  &--white {
+    background-color: rgba($white, 0.1);
+  }
+
+  &--purple {
+    background: $main_grad_bg;
+  }
+
+  &--purple-lg {
+    background: $light_grad_bg;
+  }
+
+  &--pd-lg {
+    padding: $offset50 $offset10;
+
+    @include breakpoint(mediumLarge) {
+      padding: 90px $offset40;
+    }
+
+    @include breakpoint(desktopMd) {
+      padding: 150px $offset40;
+    }
+
+    @include breakpoint(desktopLg) {
+      padding: 180px $offset40;
+    }
+  }
+
+  &--pd-md {
+    padding: $offset50 $offset10;
+
+    @include breakpoint(mediumLarge) {
+      padding: 70px $offset40;
+    }
+
+    @include breakpoint(desktop) {
+      padding: 100px $offset40;
+    }
+  }
+
+  &--pd-sm {
+    padding: $offset50 $offset10;
+
+    @include breakpoint(mediumLarge) {
+      padding: 50px $offset40;
+    }
+
+    @include breakpoint(desktop) {
+      padding: 90px $offset40;
+    }
+  }
+
+  &--pd-xs {
+    @include breakpoint(mediumLarge) {
+      padding: 20px $offset40;
+    }
+  }
+
+  /* Default styles for text
+
+  h2 {
+    color: $purple;
+    font-family: $condensed;
+    font-size: calculateRem(33px);
+    font-weight: bold;
+    letter-spacing: 0.88px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @include breakpoint(mediumLarge) {
+      font-size: calculateRem(35px);
+      letter-spacing: 0.9px;
+      line-height: 1.5;
+    }
+  }
+
+  h3 {
+    color: $darkorange;
+    font-size: calculateRem(24px);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  a {
+    color: $green;
+    font-size: calculateRem(17px);
+    font-family: $condensed;
+    font-weight: bold;
+  }
+
+  */
+}

@@ -1,0 +1,40 @@
+.c-bg-cityfull {
+  display: none;
+
+  @include breakpoint(desktop) {
+    display: block;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: perspective(1px) translate(-70%, -50%);
+
+    &__img {
+      width: 140%;
+      opacity: 0.1;
+    }
+  }
+
+  &__img-top {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+
+    @include breakpoint(small) {
+      width: 55%;
+    }
+
+    @include breakpoint(medium) {
+      width: 60%;
+    }
+
+    @include breakpoint(desktopLarge) {
+      width: 50%;
+    }
+  }
+}

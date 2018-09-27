@@ -1,0 +1,63 @@
+/*
+Front page hero
+background (city) is styled in _bg-city.scss
+*/
+
+.c-hero-front {
+
+  /*Logo, text and form are displayed 15% from the top*/
+  &__content {
+    width: 100%;
+    z-index: 4;
+    margin: 60px auto 0 auto;
+
+    @include breakpoint(medium) {
+      margin: 120px auto 90px auto;
+    }
+
+    @include breakpoint(large) {
+      margin: 90px auto 150px auto;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: $offset20 0 0 0;
+
+    @include breakpoint(small) {
+      width: 75%;
+      padding: 0 0 $offset30 0;
+    }
+
+    @include breakpoint(medium) {
+      width: 55%;
+    }
+
+    @include breakpoint(desktop) {
+      width: 40%;
+      padding: 0 0 $offset30 0;
+    }
+
+    @include breakpoint(desktopLarge) {
+      padding: $offset30 0 $offset60 0;
+      width: 32%;
+    }
+  }
+}
+
+/*
+Regular page hero
+background (city) is styled in _bg-city.scss
+*/
+.c-hero {
+  &__title-wrap {
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    /* centers text wrap verticaly */
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+  }
+}
